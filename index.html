@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="SpanBuy spreadsheet : parcourez dix catégories sur HipoBuyFind et comparez les tailles, les photos QC et le coût total avant de commander.">
+<meta name="theme-color" content="#f6f1e8">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="SpanBuy spreadsheet | Catégories et guide d’achat">
+<meta property="og:description" content="Explorez les catégories sur HipoBuyFind et apprenez à comparer une fiche, ses photos QC et les frais de livraison.">
+<title>SpanBuy spreadsheet | Catégories et guide d’achat</title>
+<!-- Repérage éditorial : la première page Bing n’a pas pu être vérifiée.
+     Une recherche web complémentaire a relevé des pages sur spanbuy.app,
+     spanbuy.net, spanbuy.co, qcradar.com, spanbuyfinds.com, span-buy.com et
+     spanbuy.info. Thèmes relevés : catégories, liens produits, photos QC,
+     variantes et livraison. L’ordre des résultats Bing reste indéterminé. -->
+<!-- Requêtes secondaires : catalogue SpanBuy, guide des tailles, photos QC, frais de livraison.
+     Expressions de longue traîne traitées : comparer deux fiches produit, choisir une pointure EU,
+     mesurer la longueur du pied, demander la longueur de semelle intérieure, mesurer un sweat à plat,
+     vérifier la largeur de poitrine, mesurer la longueur d’un t-shirt, vérifier l’entrejambe d’un pantalon,
+     comparer les tailles d’un ensemble, mesurer le tour de tête, vérifier la longueur des manches,
+     vérifier le fermoir d’un bracelet, lire les photos QC de baskets, vérifier les coutures d’une basket,
+     demander un gros plan du flocage, lire une étiquette de composition, retrouver un lien produit expiré,
+     estimer une livraison en France, comparer des devis pour la Belgique, calculer le poids volumétrique,
+     comparer colis groupé et envois séparés, calculer le coût total en euros, vérifier les conditions de retour. -->
+<style>
+:root{color-scheme:light;--paper:#f6f1e8;--ink:#232039;--muted:#554e64;--accent:#4a316d;--line:#d9d0df;--white:#fffdf9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+main,footer{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+a{color:var(--accent);text-underline-offset:.2em}
+:focus-visible{outline:3px solid #7742ad;outline-offset:4px}
+header{padding:1.7rem 0 1rem}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,h3{line-height:1.15}
+h1{font-size:clamp(2.1rem,7vw,4.6rem);letter-spacing:-.055em;margin-bottom:.45rem}
+h2{font-size:clamp(1.35rem,3vw,2rem);letter-spacing:-.03em}
+h3{font-size:1.12rem}
+p+ p{margin-top:.75rem}
+header p,.muted,figcaption{color:var(--muted)}
+nav{margin-bottom:1.15rem}
+nav ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr));gap:.5rem;list-style:none;padding:0;margin:.6rem 0 0}
+nav a{display:flex;align-items:center;min-height:44px;padding:.45rem .7rem;border:1px solid var(--line);border-radius:.55rem;background:var(--white);font-weight:650}
+nav a:hover{background:#eae1f2}
+.hero{display:grid;grid-template-columns:1fr 1fr;overflow:hidden;border-radius:1rem;background:#eae1f2}
+.hero-copy{align-self:center;padding:clamp(1rem,4vw,2.6rem)}
+.hero-copy p{margin:.75rem 0 1rem}
+img{display:block;width:100%;height:auto;object-fit:cover;background:#eee9e3}
+.hero img{height:100%;aspect-ratio:4/3}
+.button{display:inline-block;border-radius:.5rem;padding:.6rem .9rem;background:var(--accent);color:white;font-weight:700}
+section{margin-top:2rem}
+.gallery,.guides{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:.8rem}
+figure,article{overflow:hidden;border:1px solid var(--line);border-radius:.75rem;background:var(--white)}
+figure img{aspect-ratio:1}
+figcaption,article{padding:.8rem 1rem}
+article p{margin-top:.55rem}
+details{border-bottom:1px solid var(--line);padding:.7rem 0}
+summary{cursor:pointer;font-weight:700;padding:.25rem 0}
+details p{margin:.35rem 0}
+footer{margin-top:2rem;padding:1rem 0 2rem;border-top:1px solid var(--line);color:var(--muted)}
+@media(max-width:44rem){.hero,.guides{grid-template-columns:1fr}.hero img{max-height:22rem}.gallery{grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr))}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "inLanguage":"fr",
+  "name":"SpanBuy spreadsheet | Catégories et guide d’achat",
+  "mainEntity":[
+    {"@type":"Question","name":"Qu’est-ce qu’un SpanBuy spreadsheet ?","acceptedAnswer":{"@type":"Answer","text":"C’est une liste de références produits organisée pour faciliter la recherche et la comparaison. Les catégories de ce guide ouvrent le catalogue HipoBuyFind."}},
+    {"@type":"Question","name":"Une photo QC suffit-elle pour vérifier un article ?","acceptedAnswer":{"@type":"Answer","text":"Elle aide à examiner l’état visible, la couleur et les finitions. Pour choisir une variante, vérifiez aussi sa référence et ses mesures. Une photo seule ne prouve pas l’authenticité."}},
+    {"@type":"Question","name":"Comment comparer le coût d’une livraison en France ?","acceptedAnswer":{"@type":"Answer","text":"Comparez les devis pour la même destination et le même contenu de colis. Additionnez le prix des articles, le transport et les éventuels frais ou taxes, puis notez la devise et la date."}},
+    {"@type":"Question","name":"Que faire si un lien produit ne fonctionne plus ?","acceptedAnswer":{"@type":"Answer","text":"Repartez de la catégorie et recherchez la référence exacte. Vérifiez la taille, le coloris et les photos de la nouvelle fiche avant de la retenir."}}
+  ]
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/jaqbh/">
+</head>
+<body>
+<main>
+<header>
+<h1>SpanBuy spreadsheet</h1>
+<p>Un guide en français pour trouver une catégorie, lire une fiche produit et comparer deux références avant de commander.</p>
+</header>
+<nav aria-label="Catégories HipoBuyFind">
+<h2>Parcourir le catalogue</h2>
+<ul>
+<li><a href="https://hipobuyfind.com/category-911-Shoes.html">Chaussures</a></li>
+<li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Sweats et pulls</a></li>
+<li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirts</a></li>
+<li><a href="https://hipobuyfind.com/category-914-Jackets.html">Vestes</a></li>
+<li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Pantalons et shorts</a></li>
+<li><a href="https://hipobuyfind.com/category-916-Headwear.html">Casquettes et bonnets</a></li>
+<li><a href="https://hipobuyfind.com/category-917-Sets.html">Ensembles</a></li>
+<li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Sous-vêtements</a></li>
+<li><a href="https://hipobuyfind.com/category-919-Jersey.html">Maillots</a></li>
+<li><a href="https://hipobuyfind.com/category-920-Accessories.html">Accessoires</a></li>
+</ul>
+</nav>
+<div class="hero">
+<div class="hero-copy">
+<h2>Comparer deux fiches sans confondre les variantes</h2>
+<p>Gardez le lien produit, la référence, le coloris et la taille sur une même ligne. Ajoutez la date de consultation et les mesures utiles. Vous saurez ainsi quelle fiche rouvrir si le vendeur modifie son annonce.</p>
+<a class="button" href="https://www.hipobuyfind.com">Ouvrir HipoBuyFind</a>
+</div>
+<img src="https://nikeclprod.vtexassets.com/arquivos/ids/160793-1600-1600?aspect=true&amp;height=640&amp;width=640" width="640" height="640" alt="Basket blanche Nike Air Force 1 ’07" fetchpriority="high">
+</div>
+<section aria-labelledby="modeles">
+<h2 id="modeles">Détails à observer selon le modèle</h2>
+<p class="muted">Ces photos illustrent des modèles de marque. La disponibilité se vérifie dans le catalogue.</p>
+<div class="gallery">
+<figure>
+<img src="https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1749661334/836224_3HBDF_9577_003_100_0000_Light-cappellino-da-baseball-in-denim-gg-con-morsetto.jpg" width="490" height="490" alt="Casquette Gucci en denim GG avec mors" loading="lazy" decoding="async">
+<figcaption>Casquette Gucci. Vérifiez le tour de tête et la plage de réglage.</figcaption>
+</figure>
+<figure>
+<img src="https://cdn.store-assets.com/s/386051/i/17978047.jpg" width="480" height="480" alt="Veste en jean Louis Vuitton à motif Monogram" loading="lazy" decoding="async">
+<figcaption>Veste Louis Vuitton. Comparez la carrure et la longueur des manches.</figcaption>
+</figure>
+<figure>
+<img src="https://assets.christiandior.com/is/image/diorprod/B1310PTCRSD301_E01?%24default_GHC%24=&amp;bfc=on&amp;crop=467%2C327%2C1062%2C1178&amp;wid=490&amp;qlt=80" width="490" height="544" alt="Bracelet Dior Petit CD de finition dorée" loading="lazy" decoding="async">
+<figcaption>Bracelet Dior. Relevez la longueur utile et le type de fermoir.</figcaption>
+</figure>
+</div>
+</section>
+<section aria-labelledby="articles">
+<h2 id="articles">Guides pour préparer un achat</h2>
+<div class="guides">
+<article>
+<h3>Guide des tailles et des mesures</h3>
+<p>Pour choisir une pointure EU, comparez la longueur de votre pied au tableau de la fiche. Demandez la longueur de la semelle intérieure si la mesure disponible reste ambiguë.</p>
+<p>Pour un sweat à capuche ou un t-shirt, mesurez à plat la largeur de poitrine et la longueur du vêtement sur une pièce que vous portez déjà. Sur un pantalon, comparez le tour de taille et l’entrejambe. Pour un ensemble, vérifiez séparément le haut et le bas.</p>
+</article>
+<article>
+<h3>Lire les photos QC d’une référence</h3>
+<p>Une fois la taille et le coloris identifiés, vérifiez que les photos de contrôle qualité correspondent à la variante choisie. Pour des baskets, regardez la semelle et les coutures. Pour un maillot, demandez un gros plan du flocage si ce détail compte pour vous.</p>
+<p>Vérifiez aussi l’étiquette de composition d’un vêtement ou les dimensions d’un accessoire. Si une photo manque, notez le détail à confirmer avant d’ajouter la fiche à votre sélection.</p>
+</article>
+<article>
+<h3>Estimer les frais de livraison</h3>
+<p>Pour une livraison en France ou en Belgique, utilisez le pays et le code postal réels. Renseignez le poids du colis et ses dimensions, puis demandez si le transporteur facture au poids volumétrique.</p>
+<p>Pour comparer un colis groupé et des envois séparés, notez le coût total en euros, le suivi du colis et les conditions de retour. En cas de conversion, conservez le taux de change utilisé et vérifiez les taxes éventuelles au moment du devis.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="faq">
+<h2 id="faq">Questions fréquentes</h2>
+<details open>
+<summary>Qu’est-ce qu’un SpanBuy spreadsheet ?</summary>
+<p>C’est une liste de références produits organisée pour faciliter la recherche et la comparaison. Les catégories de ce guide ouvrent le catalogue HipoBuyFind.</p>
+</details>
+<details>
+<summary>Une photo QC suffit-elle pour vérifier un article ?</summary>
+<p>Elle aide à examiner l’état visible, la couleur et les finitions. Pour choisir une variante, vérifiez aussi sa référence et ses mesures. Une photo seule ne prouve pas l’authenticité.</p>
+</details>
+<details>
+<summary>Comment comparer le coût d’une livraison en France ?</summary>
+<p>Comparez les devis pour la même destination et le même contenu de colis. Additionnez le prix des articles, le transport et les éventuels frais ou taxes, puis notez la devise et la date.</p>
+</details>
+<details>
+<summary>Que faire si un lien produit ne fonctionne plus ?</summary>
+<p>Repartez de la catégorie et recherchez la référence exacte. Vérifiez la taille, le coloris et les photos de la nouvelle fiche avant de la retenir.</p>
+</details>
+</section>
+</main>
+<footer>Guide de consultation indépendant. <a href="https://www.hipobuyfind.com">Accéder à HipoBuyFind</a>.</footer>
+</body>
+</html>
